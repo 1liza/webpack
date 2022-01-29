@@ -6,10 +6,11 @@ const path = require("path");
 module.exports = {
   entry: {
     main: "./src/main.js",
+    sub: "./src/main.js",
   },
-  mode: "production",
-  devtool: "eval-cheap-module-source-map",
+  mode: "development",
   output: {
+    publicPath: "http://baidu/", //cdn配置
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
